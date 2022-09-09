@@ -1,0 +1,263 @@
+From c2032d1a0cf5619101b906c0f0a746df3ee8a3f2 Mon Sep 17 00:00:00 2001
+From: caroline wanjiru <cw35677807@gmail.com>
+Date: Fri, 9 Sep 2022 15:39:35 -0700
+Subject: [PATCH 7/7] 1-last_digit.c
+
+---
+ .../0001-0-positive_or_negative.c.patch       | 53 +++++++++++++++++++
+ .../0002-1-last_digit.c.patch                 | 51 ++++++++++++++++++
+ .../0003-1-last_digit.c.patch                 | 20 +++++++
+ .../0004-0-positive_or_negaative.c.patch      | 26 +++++++++
+ .../0005-1-last_digit.c.patch                 | 31 +++++++++++
+ .../0006-1-last_digit.c.patch                 | 23 ++++++++
+ 6 files changed, 204 insertions(+)
+ create mode 100644 0x01-variables_if_else_while/0001-0-positive_or_negative.c.patch
+ create mode 100644 0x01-variables_if_else_while/0002-1-last_digit.c.patch
+ create mode 100644 0x01-variables_if_else_while/0003-1-last_digit.c.patch
+ create mode 100644 0x01-variables_if_else_while/0004-0-positive_or_negaative.c.patch
+ create mode 100644 0x01-variables_if_else_while/0005-1-last_digit.c.patch
+ create mode 100644 0x01-variables_if_else_while/0006-1-last_digit.c.patch
+
+diff --git a/0x01-variables_if_else_while/0001-0-positive_or_negative.c.patch b/0x01-variables_if_else_while/0001-0-positive_or_negative.c.patch
+new file mode 100644
+index 0000000..60534b5
+--- /dev/null
++++ b/0x01-variables_if_else_while/0001-0-positive_or_negative.c.patch
+@@ -0,0 +1,53 @@
++From dfc2553c2479e86cf6cd8a575d13feaccb7cccc9 Mon Sep 17 00:00:00 2001
++From: caroline wanjiru <cw35677807@gmail.com>
++Date: Fri, 9 Sep 2022 11:18:59 -0700
++Subject: [PATCH 1/6] 0-positive_or_negative.c
++
++---
++ .../0-positive_or_negative.c                  | 34 +++++++++++++++++++
++ 1 file changed, 34 insertions(+)
++ create mode 100755 0x01-variables_if_else_while/0-positive_or_negative.c
++
++diff --git a/0x01-variables_if_else_while/0-positive_or_negative.c b/0x01-variables_if_else_while/0-positive_or_negative.c
++new file mode 100755
++index 0000000..bdd6be8
++--- /dev/null
+++++ b/0x01-variables_if_else_while/0-positive_or_negative.c
++@@ -0,0 +1,34 @@
+++#include <stdlib.h>
+++#include <time.h>
+++#include <stdio.h>
+++
+++/**
+++ * main-prints if number is positive, zero or negative
+++ *
+++ * Return:Always (sucess)
+++ */
+++int main(void)
+++{
+++	int n;
+++
+++	srand(time(0));
+++	n = rand() - RAND_MAX / 2;
+++	
+++	if(n > 0)
+++	{
+++
+++		print(%d is positive\n",n);
+++	}
+++	else if (n == 0)
+++	{
+++
+++		print("%d is zero\n",n);
+++	}
+++	else
+++	{
+++
+++		print("%d is negative\n",n);
+++	}
+++
+++	return (0);
+++}
++-- 
++2.25.1
++
+diff --git a/0x01-variables_if_else_while/0002-1-last_digit.c.patch b/0x01-variables_if_else_while/0002-1-last_digit.c.patch
+new file mode 100644
+index 0000000..f6ff1fa
+--- /dev/null
++++ b/0x01-variables_if_else_while/0002-1-last_digit.c.patch
+@@ -0,0 +1,51 @@
++From 36b04edfa75d5f7157c515bf31b1c329b8937509 Mon Sep 17 00:00:00 2001
++From: caroline wanjiru <cw35677807@gmail.com>
++Date: Fri, 9 Sep 2022 11:58:41 -0700
++Subject: [PATCH 2/6] 1-last_digit.c
++
++---
++ 0x01-variables_if_else_while/1-last_digit.c | 32 +++++++++++++++++++++
++ 1 file changed, 32 insertions(+)
++ create mode 100755 0x01-variables_if_else_while/1-last_digit.c
++
++diff --git a/0x01-variables_if_else_while/1-last_digit.c b/0x01-variables_if_else_while/1-last_digit.c
++new file mode 100755
++index 0000000..3587180
++--- /dev/null
+++++ b/0x01-variables_if_else_while/1-last_digit.c
++@@ -0,0 +1,32 @@
+++#include <stdlib.h>
+++#include <time.h>
+++#include <stdio.h>
+++/**
+++ * main - Prints random number to variable
+++ *
+++ * Return: Always (successful)
+++ */
+++int main(void)
+++{
+++	int n;
+++	char last[] = "last digit of";
+++
+++	srand(time(0));
+++	n =rand() - RAND_MAX / 2;
+++	printf("%s %d is %d and is", last, n, n %10);
+++	if (n % 10 > 5)
+++	{
+++		
+++		printf("greater than 5\n");
+++	}
+++	else if (n % 10 == 0)
+++	{
+++
+++		printf("0\n");
+++	}
+++	else
+++	{
+++
+++		printf("less than 6 and not 0\n");
+++	}
+++	return (0);
++-- 
++2.25.1
++
+diff --git a/0x01-variables_if_else_while/0003-1-last_digit.c.patch b/0x01-variables_if_else_while/0003-1-last_digit.c.patch
+new file mode 100644
+index 0000000..7f4ab01
+--- /dev/null
++++ b/0x01-variables_if_else_while/0003-1-last_digit.c.patch
+@@ -0,0 +1,20 @@
++From b5b82ef70a455b6640bf4ce5f58cfc2273093909 Mon Sep 17 00:00:00 2001
++From: caroline wanjiru <cw35677807@gmail.com>
++Date: Fri, 9 Sep 2022 12:15:21 -0700
++Subject: [PATCH 3/6] 1-last_digit.c
++
++---
++ 0x01-variables_if_else_while/alx-low_level_programming | 1 +
++ 1 file changed, 1 insertion(+)
++ create mode 160000 0x01-variables_if_else_while/alx-low_level_programming
++
++diff --git a/0x01-variables_if_else_while/alx-low_level_programming b/0x01-variables_if_else_while/alx-low_level_programming
++new file mode 160000
++index 0000000..b23707c
++--- /dev/null
+++++ b/0x01-variables_if_else_while/alx-low_level_programming
++@@ -0,0 +1 @@
+++Subproject commit b23707c25df32710fb839584d91d130623d66b16
++-- 
++2.25.1
++
+diff --git a/0x01-variables_if_else_while/0004-0-positive_or_negaative.c.patch b/0x01-variables_if_else_while/0004-0-positive_or_negaative.c.patch
+new file mode 100644
+index 0000000..6d3f00c
+--- /dev/null
++++ b/0x01-variables_if_else_while/0004-0-positive_or_negaative.c.patch
+@@ -0,0 +1,26 @@
++From cd1c2c36d681d1dc3ea85383f32561ca2a4b36f0 Mon Sep 17 00:00:00 2001
++From: caroline wanjiru <cw35677807@gmail.com>
++Date: Fri, 9 Sep 2022 13:14:53 -0700
++Subject: [PATCH 4/6] 0-positive_or_negaative.c
++
++---
++ 0x01-variables_if_else_while/.swp | Bin 0 -> 12288 bytes
++ 1 file changed, 0 insertions(+), 0 deletions(-)
++ create mode 100644 0x01-variables_if_else_while/.swp
++
++diff --git a/0x01-variables_if_else_while/.swp b/0x01-variables_if_else_while/.swp
++new file mode 100644
++index 0000000000000000000000000000000000000000..48f7b2200d69458c9403d059950dcc0a70dc1684
++GIT binary patch
++literal 12288
++zcmeI%yAFad6oBCa8xsa!fXi+Q9fU_<aKv3OtQf-1qw*-)qD)3c3CVww_N14jr{C7J
++zR@d?p=BHFl9BlWF#1-kgZdk@^S?hD7nzn8WU99b64FLqU6!0pYrOH;2#8G$*sx6D*
++zYy=QM009ILKmY**5cspe@Ni@_XPW2!9L|sYnI<8C00IagfB*srAb<b@2q1vK4h3#^
++ok;xZ%nr8q1m-qiX-r;>H836<kKmY**5I_I{1Q0*~0R+AUUK1-10ssI2
++
++literal 0
++HcmV?d00001
++
++-- 
++2.25.1
++
+diff --git a/0x01-variables_if_else_while/0005-1-last_digit.c.patch b/0x01-variables_if_else_while/0005-1-last_digit.c.patch
+new file mode 100644
+index 0000000..91be1ed
+--- /dev/null
++++ b/0x01-variables_if_else_while/0005-1-last_digit.c.patch
+@@ -0,0 +1,31 @@
++From 1dc11fe643cf5daff1562871c7febff6335e01d0 Mon Sep 17 00:00:00 2001
++From: caroline wanjiru <cw35677807@gmail.com>
++Date: Fri, 9 Sep 2022 14:34:14 -0700
++Subject: [PATCH 5/6] 1-last_digit.c
++
++---
++ 0x01-variables_if_else_while/1-last_digit.c | 3 +++
++ 1 file changed, 3 insertions(+)
++
++diff --git a/0x01-variables_if_else_while/1-last_digit.c b/0x01-variables_if_else_while/1-last_digit.c
++index 3587180..c6d6a26 100755
++--- a/0x01-variables_if_else_while/1-last_digit.c
+++++ b/0x01-variables_if_else_while/1-last_digit.c
++@@ -6,6 +6,7 @@
++  *
++  * Return: Always (successful)
++  */
+++
++ int main(void)
++ {
++ 	int n;
++@@ -29,4 +30,6 @@ int main(void)
++ 
++ 		printf("less than 6 and not 0\n");
++ 	}
+++
++ 	return (0);
+++}	
++-- 
++2.25.1
++
+diff --git a/0x01-variables_if_else_while/0006-1-last_digit.c.patch b/0x01-variables_if_else_while/0006-1-last_digit.c.patch
+new file mode 100644
+index 0000000..27e1fb5
+--- /dev/null
++++ b/0x01-variables_if_else_while/0006-1-last_digit.c.patch
+@@ -0,0 +1,23 @@
++From d934dfb88953354a3dde8088a2383302da0b5674 Mon Sep 17 00:00:00 2001
++From: caroline wanjiru <cw35677807@gmail.com>
++Date: Fri, 9 Sep 2022 14:39:04 -0700
++Subject: [PATCH 6/6] 1-last_digit.c
++
++---
++ 0x01-variables_if_else_while/1-last_digit.c | 2 +-
++ 1 file changed, 1 insertion(+), 1 deletion(-)
++
++diff --git a/0x01-variables_if_else_while/1-last_digit.c b/0x01-variables_if_else_while/1-last_digit.c
++index c6d6a26..49c367f 100755
++--- a/0x01-variables_if_else_while/1-last_digit.c
+++++ b/0x01-variables_if_else_while/1-last_digit.c
++@@ -31,5 +31,5 @@ int main(void)
++ 		printf("less than 6 and not 0\n");
++ 	}
++ 
++-	return (0);
+++	return(0);
++ }	
++-- 
++2.25.1
++
+-- 
+2.25.1
+
