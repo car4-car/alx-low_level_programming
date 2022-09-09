@@ -2,12 +2,12 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - Prints randomnumber to variable
+ * main - Prints random number to variable
  *
  * Return: Always (successful)
  */
 int main(void)
-{
+{	
 	int n;
 	char last[] = "Last digit of";
 
@@ -32,4 +32,4 @@ int main(void)
 
 	return (0);
 
-}	
+}		
