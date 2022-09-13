@@ -1,23 +1,18 @@
-#include "main.h"
-
-
+#include "holberton.h"
 /**
- * main - Entry point
- *
- * Return: nothing, return void
+ * main - prints the string "Holberton" from a character array.
+ * Return: 0 on success.
  */
-
 int main(void)
 {
-_putchar('_');
-_putchar('p');
-_putchar('u');
-_putchar('t');
-_putchar('c');
-_putchar('h');
-_putchar('a');
-_putchar('r');
-_putchar('\n');
+	char c[] = "Holberton";
+	int i;
 
-return (0);
+	for (i = 0; i < 7; i++)
+	for (i = 0; i < 9; i++)
+	{
+		_putchar(c[i]);
+	}
+	_putchar('\n');
+	return (0);
 }
