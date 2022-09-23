@@ -2,7 +2,7 @@
 
 /**
  * _strcat - concatenates two strings
- * @dest: string to be copied to 
+ * @dest: string to be copied to
  * @src: to be appended to end of dest
  * Return: returns dest
  */
